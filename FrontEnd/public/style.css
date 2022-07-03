@@ -1,0 +1,160 @@
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+#contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 1rem;
+}
+
+.spanAñadir {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inputAñadir {
+    height: 2rem;
+    width: 15rem;
+    border: 0.063rem solid rgb(147, 147, 255);
+}
+
+.btnAñadir {
+    height: 2rem;
+    border-radius: 5px;
+    background-color: #76dce6bb;
+    border: 0.063rem solid rgb(147, 147, 255);
+    cursor: pointer;
+}
+
+#datosContainer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dato {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.125rem solid rgb(145, 255, 145);
+    border-radius: 0.625rem;
+    margin-top: 1rem;
+    box-sizing: border-box;
+}
+
+.imgDato {
+    width: 10rem;
+    border-right: 0.125rem solid rgb(147, 147, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgDato img {
+    width: 4rem !important;
+    height: 4rem !important;
+}
+
+
+.datoNombre,
+.datoStock {
+    width: 10rem;
+    height: 3.8rem;
+    border-right: 0.125rem solid rgb(147, 147, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.btnsDato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 80%;
+}
+
+.btnDato img {
+    width: 1rem;
+}
+
+.btnDato {
+    margin: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.win {
+    color: rgb(118, 207, 118) !important;
+}
+
+.lose {
+    color: rgb(255, 13, 13) !important;
+}
+
+
+/* Loader */
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: rgb(0, 0, 0) transparent rgb(0, 0, 0) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fondo deshabilitado */
+
+.blackwhite {
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* W3C */
+    cursor: not-allowed;
+}
+
+.cursorNot {
+    cursor: not-allowed !important;
+}
