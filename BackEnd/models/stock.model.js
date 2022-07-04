@@ -10,7 +10,7 @@ function findAll() {
 
 function findBySymbol(symbol) {
     return new Promise((resolve, reject) => {
-        const stock = stocks.find((s) => s.symbol === symbol)
+        const stock = stocks.find((s) => s.symbol.toLowerCase() === symbol.toLowerCase())
         resolve(stock)
     })
 }
@@ -25,7 +25,7 @@ function create(stock) {
 
 function update(symbol, stock) {
     return new Promise((resolve, reject) => {
-        const index = stocks.findIndex((s) => s.symbol === symbol)
+        const index = stocks.findIndex((s) => s.symbol.toLowerCase() === symbol.toLowerCase())
         stocks[index] = { symbol, ...stock }
         writeDataToFile('./data/stocks.json', stocks);
         resolve(stocks[index])
@@ -34,7 +34,7 @@ function update(symbol, stock) {
 
 function remove(symbol) {
     return new Promise((resolve, reject) => {
-        stocks = stocks.filter((s) => s.symbol !== symbol)
+        stocks = stocks.filter((s) => s.symbol.toLowerCase() !== symbol.toLowerCase())
         writeDataToFile('./data/stocks.json', stocks);
         resolve()
     })
